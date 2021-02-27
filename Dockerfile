@@ -101,7 +101,7 @@ RUN packages="                                               \
     locales                                                  \
     pulseaudio                                               \
     tzdata"                                               && \
-    sudo add-apt-repository ppa:team-xbmc/kodi-old        && \
+    add-apt-repository ppa:team-xbmc/kodi-old             && \
                                                              \
     apt-get update                                        && \
     apt-get install -y --no-install-recommends $packages  && \
