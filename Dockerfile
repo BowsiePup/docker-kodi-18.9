@@ -45,7 +45,7 @@ RUN apt-get update                                                        && \
 RUN packages="                                               \
                                                              \
     ca-certificates                                          \
-    kodi=2:${KODI_VERSION}                                   \
+    kodi=2:${KODI_VERSION}+*                                 \
     kodi-eventclients-kodi-send                              \
     kodi-game-libretro                                       \
     kodi-game-libretro-beetle-pce-fast                       \
@@ -101,6 +101,7 @@ RUN packages="                                               \
     locales                                                  \
     pulseaudio                                               \
     tzdata"                                               && \
+    sudo add-apt-repository ppa:team-xbmc/kodi-old        && \
                                                              \
     apt-get update                                        && \
     apt-get install -y --no-install-recommends $packages  && \
