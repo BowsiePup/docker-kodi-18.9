@@ -45,7 +45,7 @@ RUN apt-get update                                                        && \
 RUN packages="                                               \
                                                              \
     ca-certificates                                          \
-    kodi=${KODI_VERSION}                                     \
+    kodi=2:${KODI_VERSION}                                   \
     kodi-eventclients-kodi-send                              \
     kodi-game-libretro                                       \
     kodi-game-libretro-beetle-pce-fast                       \
